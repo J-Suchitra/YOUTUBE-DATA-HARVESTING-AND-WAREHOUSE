@@ -403,17 +403,16 @@ def comments_table(channel_name_s):
             mydb.commit() 
 
 
-def tables(single_channel):
-    news= channels_table(single_channel)
+def tables(channel_name):
+
+    news= channels_table(channel_name)
     if news:
-        return news
-    
+        st.write(news)
     else:
-        
-        playlist_table(single_channel)
-        videos_table(single_channel)
-        comments_table(single_channel)
-        
+        playlist_table(channel_name)
+        videos_table(channel_name)
+        comments_table(channel_name)
+
     return "Tables Created Successfully"
 
 def show_channels_table():
