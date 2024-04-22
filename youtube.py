@@ -585,7 +585,7 @@ elif question=="6. likes of all videos":
     st.write(df6)
     
 elif question=="7. views of each channel":
-    query7='''select channel_name as channelname,views as totalviews from channels663'''
+    query7='''select channel_name as channelname,views as totalviews from channels'''
     cursor.execute(query7)
     mydb.commit()
     t7=cursor.fetchall()
